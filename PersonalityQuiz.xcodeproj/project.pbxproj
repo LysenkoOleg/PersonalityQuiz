@@ -13,6 +13,7 @@
 		2C1FB0FA26DFAAF100A94A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FB0F826DFAAF100A94A01 /* Main.storyboard */; };
 		2C1FB0FC26DFAAF200A94A01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FB0FB26DFAAF200A94A01 /* Assets.xcassets */; };
 		2C1FB0FF26DFAAF200A94A01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1FB0FD26DFAAF200A94A01 /* LaunchScreen.storyboard */; };
+		2C1FB10C26DFC6DA00A94A01 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1FB10B26DFC6DA00A94A01 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C1FB0FB26DFAAF200A94A01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C1FB0FE26DFAAF200A94A01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C1FB10026DFAAF200A94A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C1FB10B26DFC6DA00A94A01 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		2C1FB0F126DFAAF100A94A01 /* PersonalityQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				2C1FB0F226DFAAF100A94A01 /* AppDelegate.swift */,
-				2C1FB0F426DFAAF100A94A01 /* SceneDelegate.swift */,
-				2C1FB0F626DFAAF100A94A01 /* ViewController.swift */,
-				2C1FB0F826DFAAF100A94A01 /* Main.storyboard */,
-				2C1FB0FB26DFAAF200A94A01 /* Assets.xcassets */,
-				2C1FB0FD26DFAAF200A94A01 /* LaunchScreen.storyboard */,
-				2C1FB10026DFAAF200A94A01 /* Info.plist */,
+				2C1FB10626DFC44C00A94A01 /* ViewControllers */,
+				2C1FB10A26DFC5C500A94A01 /* Models */,
+				2C1FB10726DFC46600A94A01 /* Storyboards */,
+				2C1FB10826DFC4B100A94A01 /* App */,
+				2C1FB10926DFC4BA00A94A01 /* Resources */,
 			);
 			path = PersonalityQuiz;
+			sourceTree = "<group>";
+		};
+		2C1FB10626DFC44C00A94A01 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FB0F626DFAAF100A94A01 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C1FB10726DFC46600A94A01 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FB0F826DFAAF100A94A01 /* Main.storyboard */,
+				2C1FB0FD26DFAAF200A94A01 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2C1FB10826DFC4B100A94A01 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FB0F226DFAAF100A94A01 /* AppDelegate.swift */,
+				2C1FB0F426DFAAF100A94A01 /* SceneDelegate.swift */,
+				2C1FB10026DFAAF200A94A01 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2C1FB10926DFC4BA00A94A01 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FB0FB26DFAAF200A94A01 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C1FB10A26DFC5C500A94A01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C1FB10B26DFC6DA00A94A01 /* Question.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C1FB0F726DFAAF100A94A01 /* ViewController.swift in Sources */,
+				2C1FB10C26DFC6DA00A94A01 /* Question.swift in Sources */,
 				2C1FB0F326DFAAF100A94A01 /* AppDelegate.swift in Sources */,
 				2C1FB0F526DFAAF100A94A01 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PD89P3WJFF;
-				INFOPLIST_FILE = PersonalityQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalityQuiz/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.olegLysenko.PersonalityQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PD89P3WJFF;
-				INFOPLIST_FILE = PersonalityQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalityQuiz/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.olegLysenko.PersonalityQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
